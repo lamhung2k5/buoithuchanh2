@@ -7,6 +7,7 @@ void xuat(int *ptr, int n);
 void max(int *ptr, int n);
 void tich(int *ptr, int n);
 void nguyento(int *ptr, int n);
+void timx(int *ptr, int n);
 
 int main(){
     int *ptr, n;
@@ -19,6 +20,7 @@ int main(){
     max(ptr,n);
     tich(ptr,n);
     nguyento(ptr,n);
+    timx(ptr,n);
     free(ptr);
     getch();
 }
@@ -70,4 +72,20 @@ void nguyento(int *ptr, int n){
     }
     printf("\nso cac so nguyen to co trong mang la %d", count);
     printf("\ntong cac so nguyen to co trong mang la %d", tong);
+}
+
+void timx(int *ptr, int n){
+    int count = 0,x;
+    printf("\nnhap phan tu can tim: ");
+    scanf("%d",&x);
+    printf("phan tu can tim: ");
+    for(int i = 0; i < n; i++){
+        if (*(ptr + i) == x){
+            printf("a[%d]", i);
+            count += 1;
+        }
+    }
+    if (count == 0){
+        printf("khong co phan tu can tim.");
+    }
 }
