@@ -86,6 +86,6 @@ void timx(int *ptr, int n){
         }
     }
     if (count == 0){
-        printf("khong co phan tu can tim.");
+        printf("x khong ton tai.");
     }
 }
