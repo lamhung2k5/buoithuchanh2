@@ -9,6 +9,7 @@ void xuat(int *a, int n);
 void max(int *a, int n);
 void tinhtich(int *a, int n);
 void nguyento(int *a, int n);
+void timx(int *a, int n);
 
 
 int main(){
@@ -25,7 +26,7 @@ int main(){
     printf("\n");
     nguyento(a,n);
     printf("\n");
-    
+    timx(a,n);
 }
 
 void nhap(int *a, int n){
@@ -80,4 +81,20 @@ void nguyento(int *a, int n){
     printf("\n");
     printf("\ntong ca so nguyen to co trong mang la %d", tong);
     
+}
+
+void timx(int *a,int n){
+    int count = 0, x;
+    printf("\nnhap phan tu x can tim: ");
+    scanf("%d",&x);
+    printf("\nphan tu x can tim: ");
+    for(int i = 0; i < n; i++){
+        if(*(a + i) == x){
+            printf("\ta[%d]", i);
+            count += 1;
+        }
+    }
+    if (count == 0){
+        printf("x khong ton tai");
+    }
 }
